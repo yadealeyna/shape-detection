@@ -11,3 +11,7 @@ Renk bulma:
     https://www.vietanh.dev/courses/opencv/09-contours
 
 Koordinat: https://docs.opencv.org/4.13.0/dd/d49/tutorial_py_contour_features.html
+
+Kontür:
+https://docs.opencv.org/3.4.20/dc/dcf/tutorial_js_contour_features.html
+https://docs.opencv.org/4.13.0/d9/d8b/tutorial_py_contours_hierarchy.html
