@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('data/img6.png')
+img = cv.imread('data/img4.png')
 '''
     adım 1 giren resmi kontürle ve rengini köşesine yaz
 '''
@@ -15,8 +15,6 @@ gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 blur = cv.GaussianBlur(gray, (5, 5), 0)
 
 edges = cv.Canny(blur, 30, 150)
-
-
 
 lower_blue = np.array([110,50,50])
 upper_blue = np.array([130,255,255])
@@ -109,6 +107,16 @@ for pic, contour in enumerate(contours):
     cv.drawContours(img, [approx], 0, (0, 255, 0), 2)
     cv.putText(img, shape + "\n" + color, (approx[0][0][0], approx[0][0][1]+5), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
+for i in contours:
+    M = cv.moments(i)
+    if M['m00'] != 0:
+        cx = int(M['m10']/M['m00'])
+        cy = int(M['m01']/M['m00'])
+        cv.drawContours(img, [i], -1, (0, 255, 0), 2)
+        cv.circle(img, (cx, cy), 7, (0, 0, 255), -1)
+        cv.putText(img, "center", (cx - 20, cy - 20),
+                   cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+    print(f"x: {cx} y: {cy}")
 
 cv.imwrite('outputs/DetectedShapes.png',img)
 cv.imshow('image',img)
