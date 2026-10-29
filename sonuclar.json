@@ -1,0 +1,202 @@
+{
+  "coordinate_system": "Başlangıç sol üst köşe; x sağa, y aşağı; birim piksel",
+  "images": [
+    {
+      "name": "img1.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Altıgen",
+          "color": "kırmızı",
+          "vertices": 6,
+          "cx": 584,
+          "cy": 498
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Altıgen": 1
+      }
+    },
+    {
+      "name": "img2.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 980,
+          "cy": 1523
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Beşgen": 1
+      }
+    },
+    {
+      "name": "img3.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Dikdörtgen",
+          "color": "yeşil",
+          "vertices": 4,
+          "cx": 1260,
+          "cy": 1651
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "yeşil_Dikdörtgen": 1
+      }
+    },
+    {
+      "name": "img4.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Dikdörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 1086,
+          "cy": 2845
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "mavi_Dikdörtgen": 1
+      }
+    },
+    {
+      "name": "img5.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "yeşil",
+          "vertices": 3,
+          "cx": 1746,
+          "cy": 1294
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "yeşil_Üçgen": 1
+      }
+    },
+    {
+      "name": "img6.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "mavi",
+          "vertices": 3,
+          "cx": 1271,
+          "cy": 2996
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "mavi_Üçgen": 1
+      }
+    },
+    {
+      "name": "img7.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Altıgen",
+          "color": "kırmızı",
+          "vertices": 6,
+          "cx": 1236,
+          "cy": 1746
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Altıgen": 1
+      }
+    },
+    {
+      "name": "img8.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 390,
+          "cy": 585
+        },
+        {
+          "shape": "Üçgen",
+          "color": "mavi",
+          "vertices": 3,
+          "cx": 1287,
+          "cy": 3052
+        }
+      ],
+      "total_shapes": 2,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Beşgen": 1,
+        "mavi_Üçgen": 1
+      }
+    },
+    {
+      "name": "img9.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 979,
+          "cy": 1003
+        }
+      ],
+      "total_shapes": 1,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Beşgen": 1
+      }
+    }
+  ]
+}

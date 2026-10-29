@@ -1,77 +1,94 @@
 import cv2 as cv
 import numpy as np
+import os
+import json
+from collections import Counter 
 
-img = cv.imread('data/img6.png')
-
-#while(1):
-color = "undefined"
-hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
-
-gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-blur = cv.GaussianBlur(gray, (5, 5), 0)
-
-edges = cv.Canny(blur, 30, 150)
-
-lower_blue = np.array([110,50,50])
-upper_blue = np.array([130,255,255])
-mask_blue = cv.inRange(hsv, lower_blue, upper_blue)
-res_blue = cv.bitwise_and(img, img, mask = mask_blue)
-
-lower_green = np.array([25, 52, 72])
-upper_green = np.array([102, 255, 255])
-mask_green = cv.inRange(hsv, lower_green, upper_green)
-res_green = cv.bitwise_and(img, img, mask = mask_green)
-
-## Gen lower mask (0-5) and upper mask (175-180) of RED
-mask1 = cv.inRange(hsv, (0,50,20), (10,255,255))
-mask2 = cv.inRange(hsv, (170,50,20), (180,255,255))
-
-## Merge the mask and crop the red regions
-mask_red = cv.bitwise_or(mask1, mask2 )
-res_red = cv.bitwise_and(img, img, mask = mask_red)
-
-masks = {"red" : mask_red, "green" : mask_green, "blue" : mask_blue}
-for color, m in masks.items():
-    contours, _ = cv.findContours(m, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-    for contour in contours:
-        if cv.contourArea(contour) < 300: continue
-        epsilon = 0.04 * cv.arcLength(contour, True)
-        approx = cv.approxPolyDP(contour, epsilon, True)
-        vertices = len(approx)
-        if vertices == 3:
-            shape = "Triangle"
-        elif vertices == 4:
-            (x, y, w, h) = cv.boundingRect(approx)
-            ar = w / float(h)
-            shape = "square" if ar >= 0.95 and ar <= 1.05 else "rectangle"
-        elif vertices == 5:
-            shape = "Pentagon"
-        elif vertices == 6:
-            shape = "Altıgen"
-        else:
-            shape = "Circle"
-
-        M = cv.moments(contour)
-        if M['m00'] != 0:
-            cx = int(M['m10']/M['m00'])
-            cy = int(M['m01']/M['m00'])
-            cv.drawContours(img, [contour], -1, (0, 255, 0), 2)
-            cv.circle(img, (cx, cy), 7, (0, 0, 255), -1)
-            cv.putText(img, "center", (cx - 20, cy - 20),
-                    cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-        print(f"x: {cx} y: {cy}")
-
-        cv.drawContours(img, [approx], 0, (0, 255, 0), 2)
-        cv.putText(img, shape + "\n" + color, (approx[0][0][0], approx[0][0][1]+5), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+def masks(hsv):
+    blue = cv.inRange(hsv, (110, 50, 50), (130, 255, 255))
+    green = cv.inRange(hsv, (35, 52, 72), (85, 255, 255))  
+    red = cv.bitwise_or(cv.inRange(hsv, (0, 50, 20), (10, 255, 255)),
+                        cv.inRange(hsv, (170, 50, 20), (179, 255, 255)))
+    return {"kırmızı": red, "yeşil": green, "mavi": blue}
 
 
-cv.imwrite('outputs/DetectedShapes.png',img)
-cv.imshow('image',img)
-'''cv.imshow('mask',mask_green)
-    cv.imshow('res',res)
+def main():
+    os.makedirs('outputs', exist_ok=True)
+    sonuc = []
 
-k = cv.waitKey(5) & 0xFF
-if k == 27:
-    break'''
+    for name in sorted(os.listdir('data')):                     
+        if not name.lower().endswith(('.png', '.jpg', '.jpeg')):  
+            continue                                            
 
-cv.destroyAllWindows()
+        img = cv.imread(os.path.join('data', name))             
+        if img is None:                                         
+            print("okunamadı:", name)
+            continue 
+
+        h, w = img.shape[:2]
+
+        hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+
+        data = {"name": name, "resolution": {"width": w, "height": h}, "features": []}
+
+        #edges = cv.Canny(blur, 30, 150) kullaılmıyor şu an bakılır
+
+        for color, m in masks(hsv).items():
+            contours, _ = cv.findContours(m, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
+            for contour in contours:
+                if cv.contourArea(contour) < 300: continue
+                epsilon = 0.02 * cv.arcLength(contour, True)
+                approx = cv.approxPolyDP(contour, epsilon, True)
+                vertices = len(approx)
+                if vertices == 3:
+                    shape = "Üçgen"
+                elif vertices == 4:
+                    shape = "Dörtgen"
+                elif vertices == 5:
+                    shape = "Beşgen"
+                elif vertices == 6:
+                    shape = "Altıgen"
+                else:
+                    shape = "Tanımsız"
+
+                #merkez koordinat momenti
+                M = cv.moments(contour)
+                if M['m00'] != 0:
+                    cx = int(M['m10']/M['m00'])
+                    cy = int(M['m01']/M['m00'])
+                    cv.drawContours(img, [contour], -1, (0, 255, 0), 2)
+                    cv.circle(img, (cx, cy), 7, (0, 0, 255), -1)
+                    cv.putText(img, f"center: {cx}, {cy}", (cx - 20, cy - 20),
+                            cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                    print(f"x: {cx} y: {cy}")
+
+                    data["features"].append({  
+                        "shape": shape,
+                        "color": color,
+                        "vertices": vertices,
+                        "cx": cx,
+                        "cy": cy
+                    })
+
+                cv.drawContours(img, [approx], 0, (0, 255, 0), 2)
+                cv.putText(img, shape, (approx[0][0][0], approx[0][0][1]+5), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+                cv.putText(img, color, (approx[0][0][0], approx[0][0][1]+30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+
+        gecerli = [f for f in data["features"] if f["shape"] != "Tanımsız"]
+        data["total_shapes"] = len(gecerli)
+        data["unclassified"] = len(data["features"]) - len(gecerli)
+        data["distribution"] = dict(Counter(f"{f['color']}_{f['shape']}" for f in gecerli))
+
+        sonuc.append(data)
+
+        out_name = os.path.splitext(name)[0] + '_result.png' 
+        cv.imwrite(os.path.join('outputs', out_name), img)
+
+    with open("sonuclar.json", "w", encoding="utf-8") as f: 
+        json.dump({"coordinate_system": "Başlangıç sol üst köşe; x sağa, y aşağı; birim piksel",
+            "images": sonuc}, f, ensure_ascii=False, indent=2)
+
+        
+
+if __name__ == "__main__":
+    main()
