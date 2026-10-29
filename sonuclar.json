@@ -51,7 +51,7 @@
       },
       "features": [
         {
-          "shape": "Dikdörtgen",
+          "shape": "Dörtgen",
           "color": "yeşil",
           "vertices": 4,
           "cx": 1260,
@@ -61,7 +61,7 @@
       "total_shapes": 1,
       "unclassified": 0,
       "distribution": {
-        "yeşil_Dikdörtgen": 1
+        "yeşil_Dörtgen": 1
       }
     },
     {
@@ -72,7 +72,7 @@
       },
       "features": [
         {
-          "shape": "Dikdörtgen",
+          "shape": "Dörtgen",
           "color": "mavi",
           "vertices": 4,
           "cx": 1086,
@@ -82,7 +82,7 @@
       "total_shapes": 1,
       "unclassified": 0,
       "distribution": {
-        "mavi_Dikdörtgen": 1
+        "mavi_Dörtgen": 1
       }
     },
     {
