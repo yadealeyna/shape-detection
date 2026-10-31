@@ -593,7 +593,7 @@
         {
           "shape": "Tanımsız",
           "color": "yeşil",
-          "vertices": 12,
+          "vertices": 8,
           "cx": 1274,
           "cy": 1843
         },
@@ -633,12 +633,20 @@
           "vertices": 5,
           "cx": 979,
           "cy": 1003
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 1515,
+          "cy": 1001
         }
       ],
-      "total_shapes": 1,
+      "total_shapes": 2,
       "unclassified": 0,
       "distribution": {
-        "kırmızı_Beşgen": 1
+        "kırmızı_Beşgen": 1,
+        "mavi_Dörtgen": 1
       }
     }
   ]

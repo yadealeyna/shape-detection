@@ -72,7 +72,6 @@ def main():
                 cv.putText(img, shape.translate(tr), (x0, y0 + 5),  cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
                 cv.putText(img, color.translate(tr), (x0, y0 + 30), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
-        #bu kısıma çalış
         gecerli = [f for f in data["features"] if f["shape"] != "Tanımsız"]
         data["total_shapes"] = len(gecerli)
         data["unclassified"] = len(data["features"]) - len(gecerli)
