@@ -23,7 +23,52 @@
       }
     },
     {
-      "name": "img2.png",
+      "name": "img10.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Altıgen",
+          "color": "kırmızı",
+          "vertices": 6,
+          "cx": 865,
+          "cy": 2773
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "kırmızı",
+          "vertices": 4,
+          "cx": 1813,
+          "cy": 1996
+        },
+        {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 909,
+          "cy": 1302
+        },
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 1649,
+          "cy": 593
+        }
+      ],
+      "total_shapes": 4,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Altıgen": 1,
+        "kırmızı_Dörtgen": 1,
+        "kırmızı_Üçgen": 1,
+        "kırmızı_Beşgen": 1
+      }
+    },
+    {
+      "name": "img11.png",
       "resolution": {
         "width": 2480,
         "height": 3508
@@ -33,39 +78,296 @@
           "shape": "Beşgen",
           "color": "kırmızı",
           "vertices": 5,
-          "cx": 980,
-          "cy": 1523
+          "cx": 1629,
+          "cy": 1115
+        },
+        {
+          "shape": "Beşgen",
+          "color": "yeşil",
+          "vertices": 5,
+          "cx": 1462,
+          "cy": 2740
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 646,
+          "cy": 1850
         }
       ],
-      "total_shapes": 1,
+      "total_shapes": 3,
       "unclassified": 0,
       "distribution": {
-        "kırmızı_Beşgen": 1
+        "kırmızı_Beşgen": 1,
+        "yeşil_Beşgen": 1,
+        "mavi_Beşgen": 1
       }
     },
     {
-      "name": "img3.png",
+      "name": "img12.png",
       "resolution": {
         "width": 2480,
         "height": 3508
       },
       "features": [
         {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 1492,
+          "cy": 1388
+        },
+        {
           "shape": "Dörtgen",
           "color": "yeşil",
           "vertices": 4,
-          "cx": 1260,
-          "cy": 1651
+          "cx": 1021,
+          "cy": 1823
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1586,
+          "cy": 2780
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 613,
+          "cy": 676
+        }
+      ],
+      "total_shapes": 4,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Üçgen": 1,
+        "yeşil_Dörtgen": 1,
+        "mavi_Altıgen": 1,
+        "mavi_Beşgen": 1
+      }
+    },
+    {
+      "name": "img13.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 1833,
+          "cy": 778
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "yeşil",
+          "vertices": 4,
+          "cx": 948,
+          "cy": 2186
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1527,
+          "cy": 2882
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 1450,
+          "cy": 1460
+        }
+      ],
+      "total_shapes": 4,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Üçgen": 1,
+        "yeşil_Dörtgen": 1,
+        "mavi_Altıgen": 1,
+        "mavi_Beşgen": 1
+      }
+    },
+    {
+      "name": "img14.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 1296,
+          "cy": 3282
+        },
+        {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 1833,
+          "cy": 778
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "kırmızı",
+          "vertices": 4,
+          "cx": 420,
+          "cy": 273
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "yeşil",
+          "vertices": 4,
+          "cx": 948,
+          "cy": 2186
+        },
+        {
+          "shape": "Beşgen",
+          "color": "yeşil",
+          "vertices": 5,
+          "cx": 1450,
+          "cy": 1460
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 2033,
+          "cy": 3115
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 534,
+          "cy": 2824
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1177,
+          "cy": 467
+        }
+      ],
+      "total_shapes": 8,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Üçgen": 2,
+        "kırmızı_Dörtgen": 1,
+        "yeşil_Dörtgen": 1,
+        "yeşil_Beşgen": 1,
+        "mavi_Altıgen": 2,
+        "mavi_Beşgen": 1
+      }
+    },
+    {
+      "name": "img15.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "kırmızı",
+          "vertices": 3,
+          "cx": 1137,
+          "cy": 3040
+        },
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 1801,
+          "cy": 1146
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "yeşil",
+          "vertices": 4,
+          "cx": 733,
+          "cy": 1599
+        },
+        {
+          "shape": "Üçgen",
+          "color": "yeşil",
+          "vertices": 3,
+          "cx": 1217,
+          "cy": 303
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 2124,
+          "cy": 3213
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1538,
+          "cy": 2451
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 596,
+          "cy": 2304
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 368,
+          "cy": 740
+        }
+      ],
+      "total_shapes": 8,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Üçgen": 1,
+        "kırmızı_Beşgen": 1,
+        "yeşil_Dörtgen": 1,
+        "yeşil_Üçgen": 1,
+        "mavi_Dörtgen": 1,
+        "mavi_Altıgen": 2,
+        "mavi_Beşgen": 1
+      }
+    },
+    {
+      "name": "img2.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Beşgen",
+          "color": "yeşil",
+          "vertices": 5,
+          "cx": 2056,
+          "cy": 2636
         }
       ],
       "total_shapes": 1,
       "unclassified": 0,
       "distribution": {
-        "yeşil_Dörtgen": 1
+        "yeşil_Beşgen": 1
       }
     },
     {
-      "name": "img4.png",
+      "name": "img3.png",
       "resolution": {
         "width": 2480,
         "height": 3508
@@ -86,28 +388,7 @@
       }
     },
     {
-      "name": "img5.png",
-      "resolution": {
-        "width": 2480,
-        "height": 3508
-      },
-      "features": [
-        {
-          "shape": "Üçgen",
-          "color": "yeşil",
-          "vertices": 3,
-          "cx": 1746,
-          "cy": 1294
-        }
-      ],
-      "total_shapes": 1,
-      "unclassified": 0,
-      "distribution": {
-        "yeşil_Üçgen": 1
-      }
-    },
-    {
-      "name": "img6.png",
+      "name": "img4.png",
       "resolution": {
         "width": 2480,
         "height": 3508
@@ -128,28 +409,7 @@
       }
     },
     {
-      "name": "img7.png",
-      "resolution": {
-        "width": 2480,
-        "height": 3508
-      },
-      "features": [
-        {
-          "shape": "Altıgen",
-          "color": "kırmızı",
-          "vertices": 6,
-          "cx": 1236,
-          "cy": 1746
-        }
-      ],
-      "total_shapes": 1,
-      "unclassified": 0,
-      "distribution": {
-        "kırmızı_Altıgen": 1
-      }
-    },
-    {
-      "name": "img8.png",
+      "name": "img5.png",
       "resolution": {
         "width": 2480,
         "height": 3508
@@ -175,6 +435,189 @@
       "distribution": {
         "kırmızı_Beşgen": 1,
         "mavi_Üçgen": 1
+      }
+    },
+    {
+      "name": "img6.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Beşgen",
+          "color": "kırmızı",
+          "vertices": 5,
+          "cx": 1021,
+          "cy": 2539
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "kırmızı",
+          "vertices": 4,
+          "cx": 1836,
+          "cy": 705
+        },
+        {
+          "shape": "Üçgen",
+          "color": "yeşil",
+          "vertices": 3,
+          "cx": 1619,
+          "cy": 2061
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 531,
+          "cy": 1008
+        }
+      ],
+      "total_shapes": 4,
+      "unclassified": 0,
+      "distribution": {
+        "kırmızı_Beşgen": 1,
+        "kırmızı_Dörtgen": 1,
+        "yeşil_Üçgen": 1,
+        "mavi_Altıgen": 1
+      }
+    },
+    {
+      "name": "img7.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "mavi",
+          "vertices": 3,
+          "cx": 131,
+          "cy": 3299
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 2058,
+          "cy": 2898
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1227,
+          "cy": 2912
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 452,
+          "cy": 2736
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 1747,
+          "cy": 2118
+        },
+        {
+          "shape": "Altıgen",
+          "color": "mavi",
+          "vertices": 6,
+          "cx": 1069,
+          "cy": 1689
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 376,
+          "cy": 1697
+        },
+        {
+          "shape": "Üçgen",
+          "color": "mavi",
+          "vertices": 3,
+          "cx": 2123,
+          "cy": 1555
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "mavi",
+          "vertices": 4,
+          "cx": 1582,
+          "cy": 891
+        },
+        {
+          "shape": "Beşgen",
+          "color": "mavi",
+          "vertices": 5,
+          "cx": 471,
+          "cy": 827
+        },
+        {
+          "shape": "Üçgen",
+          "color": "mavi",
+          "vertices": 3,
+          "cx": 1261,
+          "cy": 351
+        }
+      ],
+      "total_shapes": 11,
+      "unclassified": 0,
+      "distribution": {
+        "mavi_Üçgen": 3,
+        "mavi_Beşgen": 3,
+        "mavi_Altıgen": 2,
+        "mavi_Dörtgen": 3
+      }
+    },
+    {
+      "name": "img8.png",
+      "resolution": {
+        "width": 2480,
+        "height": 3508
+      },
+      "features": [
+        {
+          "shape": "Üçgen",
+          "color": "yeşil",
+          "vertices": 3,
+          "cx": 818,
+          "cy": 2836
+        },
+        {
+          "shape": "Tanımsız",
+          "color": "yeşil",
+          "vertices": 12,
+          "cx": 1274,
+          "cy": 1843
+        },
+        {
+          "shape": "Dörtgen",
+          "color": "yeşil",
+          "vertices": 4,
+          "cx": 629,
+          "cy": 579
+        },
+        {
+          "shape": "Altıgen",
+          "color": "yeşil",
+          "vertices": 6,
+          "cx": 1127,
+          "cy": 327
+        }
+      ],
+      "total_shapes": 3,
+      "unclassified": 1,
+      "distribution": {
+        "yeşil_Üçgen": 1,
+        "yeşil_Dörtgen": 1,
+        "yeşil_Altıgen": 1
       }
     },
     {

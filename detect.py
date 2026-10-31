@@ -35,7 +35,7 @@ def main():
                 if cv.contourArea(contour) < 300: continue
 
                 #kenar sayısı ve şekil tipi
-                epsilon = 0.02 * cv.arcLength(contour, True) #epsilonun 0.02 olması doğru bi karar mı?
+                epsilon = 0.04 * cv.arcLength(contour, True)
                 approx = cv.approxPolyDP(contour, epsilon, True)
                 vertices = len(approx)
                 if vertices == 3:
@@ -67,8 +67,6 @@ def main():
                         "cx": cx,
                         "cy": cy
                     })
-
-                #cv.drawContours(img, [approx], 0, (0, 255, 0), 2) hem yanlış hem gereksiz geldi approx/contour ayrışımına bak
 
                 x0, y0 = int(approx[0][0][0]), int(approx[0][0][1])
                 cv.putText(img, shape.translate(tr), (x0, y0 + 5),  cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
